@@ -1,9 +1,0 @@
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\bin\Debug\CompressImages.exe.config
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\bin\Debug\CompressImages.exe
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\bin\Debug\CompressImages.pdb
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\obj\Debug\CompressImages.csprojResolveAssemblyReference.cache
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\obj\Debug\CompressImages.MainForm.resources
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\obj\Debug\CompressImages.Properties.Resources.resources
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\obj\Debug\CompressImages.csproj.GenerateResource.Cache
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\obj\Debug\CompressImages.exe
-C:\Users\Phuc Nguyen\Desktop\Test\CompressImageCSharp\CompressImages\CompressImages\obj\Debug\CompressImages.pdb
