@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.la_outpath = new System.Windows.Forms.Label();
             this.btnOuput = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +85,7 @@
             this.txtQualify.Name = "txtQualify";
             this.txtQualify.Size = new System.Drawing.Size(228, 20);
             this.txtQualify.TabIndex = 6;
+            this.txtQualify.Text = "50";
             // 
             // label2
             // 
@@ -141,11 +143,21 @@
             this.btnOuput.UseVisualStyleBackColor = true;
             this.btnOuput.Click += new System.EventHandler(this.btnOuput_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(686, 463);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Nguyễn Huỳnh Thành Phúc";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 464);
+            this.ClientSize = new System.Drawing.Size(834, 483);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.la_outpath);
             this.Controls.Add(this.btnOuput);
@@ -158,7 +170,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBrowse);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Compress Image";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,6 +190,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label la_outpath;
         private System.Windows.Forms.Button btnOuput;
+        private System.Windows.Forms.Label label5;
     }
 }
 

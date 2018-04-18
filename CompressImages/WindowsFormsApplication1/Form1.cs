@@ -66,45 +66,95 @@ namespace WindowsFormsApplication1
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Multiselect = true;
 
-            if (!Directory.Exists("Output"))
-            {
-                Directory.CreateDirectory("Output");
-            }
-
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 this._imagePaths = dialog.FileNames;
                 
                 label1.Text += _imagePaths.Length.ToString() + " files";
             }
+
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = _imagePaths.Length;
         }
+
+        delegate void PathAgrReturning(string path); // Delegate cua Image
+        delegate void ProgressAgrReturning();
+
+        private void SetProgress()
+        {
+            if (progressBar1.InvokeRequired)
+            {
+                ProgressAgrReturning d = new ProgressAgrReturning(SetProgress);
+                this.Invoke(d);
+            }
+            else
+            {
+                progressBar1.Value += 1;
+            }
+        }
+
+
+        private void SetImage(string path)
+        {
+            //Image image = Image.FromFile(path);
+
+            if (pictureBox1.InvokeRequired)
+            {
+                PathAgrReturning d = new PathAgrReturning(SetImage);
+                this.Invoke(d, new object[] { path });
+            }
+            else
+            {
+                if (pictureBox1.Image == null)
+                {
+                    Image image = Image.FromFile(path);
+
+                    pictureBox1.Image = image;
+                    pictureBox1.Refresh();
+                }
+                else
+                {
+                    Image old = pictureBox1.Image;
+                    pictureBox1.Image = Image.FromFile(path);
+                    pictureBox1.Refresh();
+                    old.Dispose();
+                }
+            }
+        }
+
+        private void Process()
+        {
+            try
+            {
+                foreach (string path in _imagePaths)
+                {
+                    Image image = Image.FromFile(path); // Hinh goc
+                    string outpath = _outpath + "/" + Path.GetFileName(path); // Path ra
+                    SaveJpeg(outpath, image, this._qualify); // Compress anh
+                    image.Dispose(); /// Xoa anh
+
+                    SetImage(path);
+                    SetProgress();
+
+                    Thread.Sleep(500);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        
 
         private void btnCompress_Click(object sender, EventArgs e)
         {
             int files = _imagePaths.Length;
             this._qualify = Int32.Parse(txtQualify.Text);
 
-            //int count = 0;
-            foreach (var path in _imagePaths)
-            {
-                Image image = Image.FromFile(path);
-
-                pictureBox1.Image = image;
-                pictureBox1.Refresh();
-
-                string outpath = _outpath + "/" + Path.GetFileName(path);
-                SaveJpeg(outpath, image, this._qualify);
-                image.Dispose();
-
-                progressBar1.Minimum = 0;
-                progressBar1.Maximum = files;
-
-                progressBar1.Value += 1;
-
-                Thread.Sleep(1000);
-            }
-
-            MessageBox.Show("Done");
+            Thread t1 = new Thread(Process);
+            t1.Start();
+            
         }
 
         private void btnOuput_Click(object sender, EventArgs e)

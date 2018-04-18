@@ -6,3 +6,5 @@ C:\Users\Phuc Nguyen\Desktop\Encrypt\WindowsFormsApplication1\WindowsFormsApplic
 C:\Users\Phuc Nguyen\Desktop\Encrypt\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 C:\Users\Phuc Nguyen\Desktop\Encrypt\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Phuc Nguyen\Desktop\Encrypt\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Phuc Nguyen\Desktop\Encrypt\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\Phuc Nguyen\Desktop\Encrypt\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
