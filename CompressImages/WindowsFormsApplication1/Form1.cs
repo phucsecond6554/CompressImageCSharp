@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 //using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.Threading;
@@ -71,10 +71,9 @@ namespace WindowsFormsApplication1
                 this._imagePaths = dialog.FileNames;
                 
                 label1.Text += _imagePaths.Length.ToString() + " files";
-            }
-
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = _imagePaths.Length;
+                progressBar1.Minimum = 0;
+                progressBar1.Maximum = _imagePaths.Length;
+            }            
         }
 
         delegate void PathAgrReturning(string path); // Delegate cua Image
